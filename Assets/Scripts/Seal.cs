@@ -25,8 +25,11 @@ public class Seal : MonoBehaviour {
     void Move (float h, float v)
     {
         movement.Set(h, v);
-        movement = movement.normalized;//* speed * Time.deltaTime;
+        movement = movement.normalized* speed;
+        float angle=Vector2.Angle(new Vector2(1f,1f), movement );
+        print(angle);
         playerRigidbody.AddForce(movement);
+        playerRigidbody.MoveRotation(angle);
     }
  
     void OnTriggerExit2D(Collider2D coll)
