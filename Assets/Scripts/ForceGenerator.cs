@@ -49,7 +49,7 @@ public class ForceGenerator : MonoBehaviour
         {
             seal.GetComponent<Rigidbody2D>().AddForce(direction * magnitude, ForceMode2D.Force);
             yield return new WaitForSeconds(time);
-            StartCoroutine(GenerateForce(direction * -1, magnitude * 0.7f, aftershock - 1));
+            StartCoroutine(GenerateForce(direction * -1, magnitude * 2.0f, aftershock - 1));
         }
 
 
