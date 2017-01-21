@@ -10,6 +10,7 @@ public class Timer : MonoBehaviour {
     float time;
     Text timeText;
     Text surviveText;
+    LevelManager levelManager;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +18,7 @@ public class Timer : MonoBehaviour {
         time = timeAmount;
         timeText = GameObject.Find("TimerText").GetComponent<Text>();
         surviveText = GameObject.Find("Survive").GetComponent<Text>();
+        levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         surviveText.enabled = false;
 	}
 	
@@ -31,6 +33,7 @@ public class Timer : MonoBehaviour {
         else
         {
             surviveText.enabled = true;
+            levelManager.LoadLevel("Win");
         }
 	}
 }

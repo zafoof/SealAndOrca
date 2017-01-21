@@ -9,10 +9,12 @@ public class Seal : MonoBehaviour {
     float turnspeed = 6f;
     Rigidbody2D playerRigidbody;
     private Text loseText;
+    LevelManager levelManager;
 	// Use this for initialization
 	void Start () {
         playerRigidbody = GetComponent<Rigidbody2D>();
         loseText = GameObject.Find("Lost").GetComponent<Text>();
+        levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         loseText.enabled = false;
 	}
 	
@@ -76,7 +78,7 @@ public class Seal : MonoBehaviour {
             }
         }
         
-        playerRigidbody.AddForce(movement);
+        playerRigidbody.AddForce(movement * 3);
 
         
        
@@ -87,6 +89,8 @@ public class Seal : MonoBehaviour {
         if(coll.gameObject.tag == "Iceberg")
         {
             loseText.enabled = true;
+            levelManager.LoadLevel("Lose");
+            
         }
     }
     
