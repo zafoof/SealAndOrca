@@ -53,7 +53,7 @@ public class ForceGenerator : MonoBehaviour {
         yield return new WaitForSeconds(time);
         seal.GetComponent<Rigidbody2D>().AddForce(new Vector2(dirX, dirY) * -1, ForceMode2D.Force);
         Debug.Log("Back force Given and nothing should happen now");
-        Invoke("StopForce", 0.8f);
+        
     }
-    
+ 
 }
