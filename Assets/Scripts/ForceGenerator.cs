@@ -31,7 +31,7 @@ public class ForceGenerator : MonoBehaviour
        
         Vector2 waveForceDir = v;
 
-        float magnitude = Random.Range(35f, 50f);
+        float magnitude = Random.Range(100f, 150f);
         int aftershock = 3;
         waveForceDir = waveForceDir.normalized;
 
@@ -49,7 +49,7 @@ public class ForceGenerator : MonoBehaviour
         {
             seal.GetComponent<Rigidbody2D>().AddForce(direction * magnitude, ForceMode2D.Force);
             yield return new WaitForSeconds(time);
-            StartCoroutine(GenerateForce(direction * -1, magnitude * 2.0f, aftershock - 1));
+            StartCoroutine(GenerateForce(direction * -1, magnitude * 1.5f, aftershock - 1));
         }
 
 

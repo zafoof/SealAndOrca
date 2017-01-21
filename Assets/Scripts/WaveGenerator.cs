@@ -22,6 +22,7 @@ public class WaveGenerator : MonoBehaviour {
         if (priorityDirection == 0)
         {
             int xDirection = Random.Range(1, 1000) % 2;
+            //int xDirection = 1;
             if (xDirection == 0)
             {
                 wave = Instantiate(wave, new Vector3(-10.5f, Random.Range(8.0f, -8.0f), 0), Quaternion.identity) as GameObject;
@@ -34,9 +35,10 @@ public class WaveGenerator : MonoBehaviour {
         else
         {
             int yDirection = Random.Range(1, 1000) % 2;
-            //int yDirection = 1;
+            
             if (yDirection == 0)
             {
+
                 wave = Instantiate(wave, new Vector3(Random.Range(-7f,7f),-8.0f, 0), Quaternion.identity) as GameObject;
             }
             else

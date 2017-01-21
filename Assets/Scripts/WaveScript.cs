@@ -17,19 +17,33 @@ public class WaveScript : MonoBehaviour {
         float angle = Vector3.Angle(transform.up,targetDir);
         if(transform.position.x == -10.5)
         {
-            GetComponent<Rigidbody2D>().MoveRotation(90 - angle);
+            Debug.Log("Generating point is:" + transform.position);
+            GetComponent<Rigidbody2D>().MoveRotation(-angle);
         }
         if(transform.position.x == 10.5)
         {
-            GetComponent<Rigidbody2D>().MoveRotation(-90 + angle);
+            Debug.Log("Generating point is:" + transform.position);
+            GetComponent<Rigidbody2D>().MoveRotation(angle);
         }
-        if(transform.position.y == -8.0)
+        if(transform.position.y == -8.0 && transform.position.x <0)
         {
-            GetComponent<Rigidbody2D>().MoveRotation(-90 - angle);
+            Debug.Log("Generating point is:" + transform.position);
+            GetComponent<Rigidbody2D>().MoveRotation(-angle);
         }
-        if (transform.position.y == 8.0)
+        if(transform.position.y == -8.0 && transform.position.x > 0)
         {
-            GetComponent<Rigidbody2D>().MoveRotation(90 + angle);
+            Debug.Log("Generating point is:" + transform.position);
+            GetComponent<Rigidbody2D>().MoveRotation(angle);
+        }
+        if (transform.position.y == 8.0 && transform.position.x < 0)
+        {
+            Debug.Log("Generating point is:" + transform.position);
+            GetComponent<Rigidbody2D>().MoveRotation(-angle);
+        }
+        if (transform.position.y == 8.0 && transform.position.x > 0)
+        {
+            Debug.Log("Generating point is:" + transform.position);
+            GetComponent<Rigidbody2D>().MoveRotation(angle);
         }
         /*
         if(transform.position.x < 0.0 && transform.position.y > 0)
