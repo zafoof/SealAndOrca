@@ -20,19 +20,22 @@ public class ForceGenerator : MonoBehaviour
         Debug.Log("Waiting for Input");
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
-
-            dirX = Random.Range(-3.0f, 3.0f);
-            dirY = Random.Range(-3.0f, 3.0f);
-            Vector2 waveForceDir = new Vector2(dirX, dirY);
-
-            float magnitude = Random.Range(35f, 50f);
-            int aftershock = 3;
-            waveForceDir = waveForceDir.normalized;
-
-            StartCoroutine(GenerateForce(waveForceDir, magnitude, aftershock));
+            Generate(new Vector2(Random.Range(-3.0f, 3.0f), Random.Range(-3.0f, 3.0f)));
         }
 
+    }
+    public void Generate(Vector2 v)
+    {
+        Debug.Log("Generator Called!!!");
+
+       
+        Vector2 waveForceDir = v;
+
+        float magnitude = Random.Range(35f, 50f);
+        int aftershock = 3;
+        waveForceDir = waveForceDir.normalized;
+
+        StartCoroutine(GenerateForce(waveForceDir, magnitude, aftershock));
     }
 
     IEnumerator GenerateForce(Vector2 direction, float magnitude, int aftershock)
@@ -46,7 +49,7 @@ public class ForceGenerator : MonoBehaviour
         {
             seal.GetComponent<Rigidbody2D>().AddForce(direction * magnitude, ForceMode2D.Force);
             yield return new WaitForSeconds(time);
-            StartCoroutine(GenerateForce(direction * -1, magnitude * 2f, aftershock - 1));
+            StartCoroutine(GenerateForce(direction * -1, magnitude * 0.7f, aftershock - 1));
         }
 
 
