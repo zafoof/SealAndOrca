@@ -21,7 +21,6 @@ public class ForceGenerator : MonoBehaviour {
             dirX = Random.Range(-3.0f, 3.0f);
             dirY = Random.Range(-3.0f, 3.0f);
             GenerateFrontForce(dirX,dirY);
-            
         }
         
 	}
