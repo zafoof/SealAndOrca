@@ -24,15 +24,7 @@ public class Seal : MonoBehaviour {
         movement = movement.normalized;//* speed * Time.deltaTime;
         playerRigidbody.AddForce(movement);
     }
-    /*
-    void OnTriggerEnter2D(Collider2D coll)
-    {
-        if (coll.gameObject.tag == "Iceberg")
-        {
-            Debug.Log("On the iceberg");
-        }
-    }
-
+ 
     void OnTriggerExit2D(Collider2D coll)
     {
         if(coll.gameObject.tag == "Iceberg")
@@ -40,5 +32,5 @@ public class Seal : MonoBehaviour {
             Debug.Log("Out of the iceberg and game over!!");
         }
     }
-    */
+    
 }
