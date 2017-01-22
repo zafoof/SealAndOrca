@@ -80,7 +80,6 @@
     <Compile Include="Assets\Scripts\OrcaMovement.cs" />
     <Compile Include="Assets\Scripts\Seal.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
-    <Compile Include="Assets\Scripts\WaterWaveScript.cs" />
     <Compile Include="Assets\Scripts\WaveGenerator.cs" />
     <Compile Include="Assets\Scripts\WaveScript.cs" />
   </ItemGroup>

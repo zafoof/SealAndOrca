@@ -1,11 +1,13 @@
 fileFormatVersion: 2
-guid: 5df62121a20369941af31399738c9a68
-timeCreated: 1485047890
+guid: 4b31a619eb1b92c488ba36172f6777f9
+timeCreated: 1485056023
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Water_0
-    21300002: Water_1
+    21300000: WaterWave_0
+    21300002: WaterWave_1
+    21300004: WaterWave_2
+    21300006: WaterWave_3
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -80,26 +82,52 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Water_0
+      name: WaterWave_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 187
+        y: 1390
         width: 1396
-        height: 870
+        height: 867
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Water_1
+      name: WaterWave_1
       rect:
         serializedVersion: 2
         x: 1598
-        y: 18
+        y: 1220
         width: 1346
-        height: 1177
+        height: 1175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: WaterWave_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1409
+        height: 829
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: WaterWave_3
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 577
+        width: 6
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
