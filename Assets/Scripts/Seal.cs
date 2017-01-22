@@ -8,11 +8,13 @@ public class Seal : MonoBehaviour {
     float speed = 1f;
     float turnspeed = 6f;
     Rigidbody2D playerRigidbody;
+    Animator anim;
     private Text loseText;
     LevelManager levelManager;
 	// Use this for initialization
 	void Start () {
         playerRigidbody = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         loseText = GameObject.Find("Lost").GetComponent<Text>();
         levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         loseText.enabled = false;
@@ -29,9 +31,12 @@ public class Seal : MonoBehaviour {
     void Move (float h, float v)
     {
         movement.Set(h, v);
+
+        movement = movement.normalized * speed;
+        bool walk = !(h != 0 || v != 0);
+        anim.SetBool("isWalking", walk);
+
         
-        
-        movement = movement.normalized* speed;
         if (h != 0 || v != 0)
         {
             float angle = Vector2.Angle(new Vector2(0f, 1f), movement);
