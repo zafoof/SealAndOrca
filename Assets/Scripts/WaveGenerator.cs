@@ -6,7 +6,7 @@ public class WaveGenerator : MonoBehaviour {
 
     // Use this for initialization
     public GameObject whale;
-    private GameObject wave;
+  
 	void Start () {
         InvokeRepeating("whaleGeneratorFunction", 3, 5);
 	}
@@ -18,18 +18,18 @@ public class WaveGenerator : MonoBehaviour {
 
     void whaleGeneratorFunction()
     {
-        //int priorityDirection = Random.Range(1, 1000) % 2;
-        int priorityDirection = 0;
+        int priorityDirection = Random.Range(1, 1000) % 2;
+        //int priorityDirection = 0;
         if (priorityDirection == 0)
         {
-            //int xDirection = Random.Range(1, 1000) % 2;
-            int xDirection = 0;
+            int xDirection = Random.Range(1, 1000) % 2;
+            //int xDirection = 0;
             if (xDirection == 0)
             {
                 Vector2 pos = new Vector2(-10.5f, Random.Range(8.0f, -8.0f));
                 Vector2 pos2 = pos - new Vector2(1.886f, 0.1542f);
                 whale = Instantiate(whale,pos, Quaternion.identity) as GameObject;
-                //wave = Instantiate(wave, pos2, Quaternion.identity) as GameObject;
+                
             }
             else
             {
