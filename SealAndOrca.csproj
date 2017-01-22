@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\WaveGenerator.cs" />
     <Compile Include="Assets\Scripts\WaveScript.cs" />
+    <Compile Include="Assets\Scripts\startscript.cs" />
     <Compile Include="Assets\WalrusLifeSpan.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

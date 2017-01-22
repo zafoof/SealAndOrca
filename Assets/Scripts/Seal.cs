@@ -93,10 +93,20 @@ public class Seal : MonoBehaviour {
     {
         if(coll.gameObject.tag == "Iceberg")
         {
-            loseText.enabled = true;
-            levelManager.LoadLevel("Lose");
+            playerRigidbody.mass = 100000000000000000f;
+            playerRigidbody.velocity = new Vector2(0.0f, 0.0f);
+            anim.SetBool("isDead", false);
+
+            Invoke("Lose", 2.5f);
             
         }
     }
-    
+
+    void Lose()
+    {
+        loseText.enabled = true;
+        levelManager.LoadLevel("Lose");
+
+    }
+
 }
