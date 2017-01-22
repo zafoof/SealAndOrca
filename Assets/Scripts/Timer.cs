@@ -7,7 +7,7 @@ public class Timer : MonoBehaviour {
 
     Image timeImage;
     public float timeAmount;
-    float time;
+    public float time;
     Text timeText;
     Text surviveText;
     LevelManager levelManager;
