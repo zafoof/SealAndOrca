@@ -33,7 +33,7 @@ public class Timer : MonoBehaviour {
         else
         {
             surviveText.enabled = true;
-            levelManager.LoadLevel("Win");
+            levelManager.LoadNextLevel();
         }
 	}
 }
