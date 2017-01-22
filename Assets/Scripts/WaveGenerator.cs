@@ -6,6 +6,7 @@ public class WaveGenerator : MonoBehaviour {
 
     // Use this for initialization
     public GameObject whale;
+    public AudioClip clip;
   
 	void Start () {
         InvokeRepeating("whaleGeneratorFunction", 3, 5);
@@ -19,6 +20,7 @@ public class WaveGenerator : MonoBehaviour {
     void whaleGeneratorFunction()
     {
         int priorityDirection = Random.Range(1, 1000) % 2;
+        AudioSource.PlayClipAtPoint(clip, new Vector3(0, 0, 0));
         //int priorityDirection = 0;
         if (priorityDirection == 0)
         {

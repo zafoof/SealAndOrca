@@ -8,6 +8,7 @@ public class WaveScript : MonoBehaviour {
 
     GameObject forceGenerator;
     public Transform target;
+    public AudioClip clip;
 
 
     //Vector3 startPos;
@@ -71,6 +72,7 @@ public class WaveScript : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Iceberg")
         {
+            AudioSource.PlayClipAtPoint(clip, collision.gameObject.transform.position);
             forceGenerator.GetComponent<ForceGenerator>().Generate(transform.position.normalized * -1);
             
         }

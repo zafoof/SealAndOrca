@@ -78,6 +78,7 @@
     <Compile Include="Assets\FishPowerup.cs" />
     <Compile Include="Assets\Scripts\ForceGenerator.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\MusicPlayer.cs" />
     <Compile Include="Assets\Scripts\OrcaMovement.cs" />
     <Compile Include="Assets\Scripts\Seal.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
