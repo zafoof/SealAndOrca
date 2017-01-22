@@ -8,54 +8,51 @@ public class WaveScript : MonoBehaviour {
 
     GameObject forceGenerator;
     public Transform target;
+
+
     //Vector3 startPos;
     float dirX, dirY;
 	void Start () {
         forceGenerator = GameObject.Find("Force");
 
+
         Vector3 targetDir = target.position - transform.position;
         float angle = Vector3.Angle(transform.up,targetDir);
         if(transform.position.x == -10.5)
         {
-            Debug.Log("Generating point is:" + transform.position);
+            
             GetComponent<Rigidbody2D>().MoveRotation(-angle);
+
+            //wave.transform.Rotate(wave.transform.rotation.eulerAngles +  new Vector3(0, 0, -90));
         }
         if(transform.position.x == 10.5)
         {
-            Debug.Log("Generating point is:" + transform.position);
+
+            
             GetComponent<Rigidbody2D>().MoveRotation(angle);
         }
         if(transform.position.y == -8.0 && transform.position.x <0)
         {
-            Debug.Log("Generating point is:" + transform.position);
+           
             GetComponent<Rigidbody2D>().MoveRotation(-angle);
         }
         if(transform.position.y == -8.0 && transform.position.x > 0)
         {
-            Debug.Log("Generating point is:" + transform.position);
+            
             GetComponent<Rigidbody2D>().MoveRotation(angle);
         }
         if (transform.position.y == 8.0 && transform.position.x < 0)
         {
-            Debug.Log("Generating point is:" + transform.position);
+           
             GetComponent<Rigidbody2D>().MoveRotation(-angle);
         }
         if (transform.position.y == 8.0 && transform.position.x > 0)
         {
-            Debug.Log("Generating point is:" + transform.position);
+            
             GetComponent<Rigidbody2D>().MoveRotation(angle);
         }
-        /*
-        if(transform.position.x < 0.0 && transform.position.y > 0)
-        {
-            GetComponent<Rigidbody2D>().MoveRotation(-angle);
-        }
-        else
-        {
-            GetComponent<Rigidbody2D>().MoveRotation(angle);
-        }
-        */
-        Debug.Log("The angle is: " + angle);
+   
+       
         GiveVelocity();
     }
 	
@@ -75,6 +72,7 @@ public class WaveScript : MonoBehaviour {
         if(collision.gameObject.tag == "Iceberg")
         {
             forceGenerator.GetComponent<ForceGenerator>().Generate(transform.position.normalized * -1);
+            
         }
     }
 }
