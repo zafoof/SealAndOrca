@@ -39,11 +39,14 @@ public class FishPowerup : MonoBehaviour {
             }
             else
             {
+                Animator anim = coll.gameObject.GetComponent<Animator>();
+                anim.SetInteger("elephant", 1);
                 coll.gameObject.transform.position = Vector3.zero;
                 coll.gameObject.transform.rotation = Quaternion.identity;
-                //coll.gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("/Sprites/elephantsealconcept.png") as Sprite;
+                
                 kill = 1;
                 timer.time += 20;
+               
             }
 
         
