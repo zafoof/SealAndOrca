@@ -33,6 +33,7 @@ public class Timer : MonoBehaviour {
         else
         {
             surviveText.enabled = true;
+            FishPowerup.kill = 0;
             levelManager.LoadNextLevel();
         }
 	}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class FishPowerup : MonoBehaviour {
 
     public GameObject Walrus;
-    static int kill;
+    public static int kill;
     Timer timer;
 
     private void Start()
@@ -42,6 +42,7 @@ public class FishPowerup : MonoBehaviour {
                 Animator anim = coll.gameObject.GetComponent<Animator>();
                 anim.SetInteger("elephant", 1);
                 coll.gameObject.transform.position = Vector3.zero;
+                coll.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
                 coll.gameObject.transform.rotation = Quaternion.identity;
                 
                 kill = 1;
